@@ -17,6 +17,14 @@ y = h(s)
 
 New sets of transformed sigma points are obtained. These are weighted and summed to recover the mean. Similarly, the weighted sum of the product of difference of transformed sigma points and actual mean, and its transpose gives the recovered sigma points.
 
+weights: 
+
+wm = lambda/(n+lambda) or lambda/2(n+lambda)
+
+wc = lambda/(n+lambda) or 1/2(n+lambda)
+
+Recover mu and sigma which means guassian recover:
+
 new_mu = summation(wm*y)
 
 new_sigma = summation(ws*(y-mu)*(y-mu)')

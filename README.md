@@ -21,7 +21,7 @@ weights:
 
 wm = lambda/(n+lambda) or lambda/2(n+lambda)
 
-wc = lambda/(n+lambda) or 1/2(n+lambda)
+wc = wm + (1-lambdaa**2 + beta) or lambda/(n+lambda) or 1/2(n+lambda)
 
 Recover mu and sigma which means guassian recover:
 

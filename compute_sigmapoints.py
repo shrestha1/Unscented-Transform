@@ -1,5 +1,7 @@
 import numpy as np
 from recover_guassian import recover_guassian
+from transform import transform
+
 sigma = 0.1*np.eye(2)
 mu = np.array([1, 2])
 
@@ -42,6 +44,5 @@ def compute_sigmapoints(mu, sigma):
     wc[1:] = 1/(2*(n+lambdaa))
     
     return sigma_points, wm, wc
-
-
-print(recover_guassian(*compute_sigmapoints(mu, sigma)))
+sigma_point,a, b = compute_sigmapoints(mu, sigma)
+print(transform(sigma_point))

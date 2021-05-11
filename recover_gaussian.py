@@ -1,4 +1,4 @@
-def recover_guassian(sigma_points, wm, wc):
+def recover_gaussian(sigma_points, wm, wc):
     '''
     Recover mean and sigma
 

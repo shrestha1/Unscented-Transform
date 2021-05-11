@@ -5,13 +5,15 @@ To linearize a non-linear dynamical system, mostly taylor approximation is done.
 
 Sigma points are calculated as:
 
-s(1) = mu;
+s(1) = &mu;
 
-s(2) = mu + sqrt((n+lambda)*sigma)
+s(2) = &mu; + &radic;((n+&lambda;) * &sigma;)
 
-s(3) = mu - sqrt((n+lambda)*sigma)
+s(3) = &mu; -  &radic;((n+&lambda;)*&sigma;)
 
-These sigma points are now transformed using the non-linear function h().
+
+
+These sigma points are now transformed using the non-linear function h(x).
 
 y = h(s)
 
@@ -19,15 +21,15 @@ New sets of transformed sigma points are obtained. These are weighted and summed
 
 weights: 
 
-wm = lambda/(n+lambda) or lambda/2(n+lambda)
+wm = &lambda;/(n+&lambda;) or &lambda;/2(n+&lambda;)
 
-wc = wm + (1-lambdaa**2 + beta) or lambda/(n+lambda) or 1/2(n+lambda)
+wc = wm + (1-&lambda;^2 + &beta;) or &lambda;/(n+&lambda;) or 1/2(n+&lambda;)
 
-Recover mu and sigma which means guassian recover:
+Recover &mu; and &sigma; which means guassian recover:
 
-new_mu = summation(wm*y)
+&mu;<sub>new</sub> = &sum;(wm*y)
 
-new_sigma = summation(ws*(y-mu)*(y-mu)')
+&sigma;<sub>new</sub> = &sum;(ws*(y-&mu;<sub>new</sub> )*(y-&mu;<sub>new</sub> ).T)
 
 
 

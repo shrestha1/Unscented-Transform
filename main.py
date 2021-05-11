@@ -56,13 +56,13 @@ y_max = max(mu[1], mu_trans[1]+2)
 min_indice = np.argmin(sigma_points_trans, axis=1)[1]
 dx, dy = mu_trans - sigma_points_trans[:,min_indice]
 minoraxis = np.sqrt(dx**2+dy**2)
-print("minoraxis: ", minoraxis)
+print("minoraxis: ", minoraxis*2)
 
 #finding the major axis len from the mu,
 max_indice = np.argmax(sigma_points_trans, axis=1)[0]
 dx, dy = mu_trans - sigma_points_trans[:,max_indice]
 majoraxis = np.sqrt(dx**2+dy**2)
-print("majoraxis: ", majoraxis)
+print("majoraxis: ", majoraxis*2)
 
 # angle should be obtained from the major axis
 angle = np.arctan(dy/dx)*180/3.1415
@@ -73,6 +73,10 @@ plt.plot(sigma_points_trans[0,:], sigma_points_trans[1,:], 'x', mew=2.5, ms=5, c
 
 ax.add_artist(ellipse)
 
+plt.title("Unscented Transform")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
 ax.set_xlim(x_min-3,x_max+3)
 ax.set_ylim(y_min-3,y_max+1)
+ax.legend(["Original Sigma Points", "Recovered Sigma Points"])
 plt.show()

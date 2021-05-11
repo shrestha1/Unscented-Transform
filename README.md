@@ -5,11 +5,11 @@ To linearize a non-linear dynamical system, mostly taylor approximation is done.
 
 Sigma points are calculated as:
 
-s(1) = &mu;
+s<sub>(1)</sub> = &mu;
 
-s(2) = &mu; + &radic;((n+&lambda;) * &sigma;)
+s<sub>(2)</sub> = &mu; + &radic;((n+&lambda;) * &sigma;)
 
-s(3) = &mu; -  &radic;((n+&lambda;)*&sigma;)
+s<sub>(3)</sub> = &mu; -  &radic;((n+&lambda;)*&sigma;)
 
 
 
